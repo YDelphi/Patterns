@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Patterns.AbstractFactory.Interfaces.Products;
 
 namespace Patterns.AbstractFactory.Products
 {
-    internal class Chair : ProductChair
+    public class Chair : ProductChair
     {
         public Chair() : base() { }
-
+        public override void SitDown() => Console.WriteLine("You're sitting well");
     }
 }

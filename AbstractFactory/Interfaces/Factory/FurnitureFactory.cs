@@ -1,6 +1,4 @@
-﻿using Patterns.AbstractFactory.Products;
-
-namespace Patterns.AbstractFactory.Factories
+﻿namespace Patterns.AbstractFactory.Interfaces.Factory
 {
     public abstract class FurnitureFactory
     {

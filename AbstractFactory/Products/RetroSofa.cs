@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Patterns.AbstractFactory.Interfaces.Products;
 
 namespace Patterns.AbstractFactory.Products
 {
-    internal class RetroSofa: ProductSofa
+    public class RetroSofa: ProductSofa
     {
         public RetroSofa(): base() { }
+        public override void SitDown() => Console.WriteLine("You're sitting well");
+        public override void Request() => Console.WriteLine("Requested retro sofa");
     }
 }

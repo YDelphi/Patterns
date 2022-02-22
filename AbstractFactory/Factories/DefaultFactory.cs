@@ -1,9 +1,5 @@
-﻿using Patterns.AbstractFactory.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Patterns.AbstractFactory.Interfaces.Factory;
+using Patterns.AbstractFactory.Products;
 
 namespace Patterns.AbstractFactory.Factories
 {
