@@ -13,7 +13,6 @@ namespace Patterns.AbstractFactory.Proxies
             {
                 _chair = new Chair();
             }
-            _chair.Request();
         }
     }
 }

@@ -1,11 +1,22 @@
 ﻿using Patterns.AbstractFactory.Interfaces.Factory;
+using Patterns.AbstractFactory.Interfaces.Products;
 using Patterns.AbstractFactory.Products;
 
 namespace Patterns.AbstractFactory.Factories
 {
-    internal class DefaultFactory : FurnitureFactory
+    public class DefaultFactory : FurnitureFactory
     {
-        public DefaultFactory() : base() { }
+        private static DefaultFactory? _instance;
+        private DefaultFactory() { }
+        public static DefaultFactory GetInstance()
+        {
+            if(_instance == null)
+            {
+                _instance = new DefaultFactory();
+                Console.WriteLine("Created default factory");
+            }
+            return _instance;
+        }
         public override ProductChair CreateChair()
         {
             AmountOfCreatedObjects++;

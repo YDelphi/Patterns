@@ -1,19 +1,18 @@
-﻿namespace Patterns.AbstractFactory.Interfaces.Products
+﻿
+namespace Patterns.AbstractFactory.Products
 {
-    public abstract class ProductSofa: IProduct
+    public class Table
     {
         public string Name { get; }
         public string Description { get; }
-        public ProductSofa()
+        public Table()
         {
-            Name = "sofa";
+            Name = "Table";
             Description = $"This {Name} was created in {DateTime.Today}";
         }
         public override string ToString()
         {
             return $"Name: {Name}\nDescription: {Description}";
         }
-        public abstract void SitDown();
-        public abstract void Request();
     }
 }

@@ -1,11 +1,22 @@
 ﻿using Patterns.AbstractFactory.Interfaces.Factory;
+using Patterns.AbstractFactory.Interfaces.Products;
 using Patterns.AbstractFactory.Products;
 
 namespace Patterns.AbstractFactory.Factories
 {
     public class RetroFactory : FurnitureFactory
     {
-        public RetroFactory(): base() { }
+        private static RetroFactory? _instance;
+        private RetroFactory() { }
+        public static RetroFactory GetInstance()
+        {
+            if(_instance == null)
+            {
+                _instance = new RetroFactory();
+                Console.WriteLine("Created retro factory");
+            }
+            return _instance;
+        }
         public override ProductChair CreateChair()
         {
             AmountOfCreatedObjects++;

@@ -13,7 +13,6 @@ namespace Patterns.AbstractFactory.Proxies
             {
                 _sofa = new Sofa();
             }
-            _sofa.Request();
         }
     }
 }

@@ -13,6 +13,5 @@ namespace Patterns.AbstractFactory.Interfaces.Decorator
                 _product.SitDown();
             }
         }
-
     }
 }

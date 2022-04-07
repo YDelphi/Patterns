@@ -7,7 +7,11 @@
         public ProductChair()
         {
             Name = "Chair";
-            Description = $"This {nameof(ProductChair)} was created in {DateTime.Today}";
+            Description = $"This {Name} was created in {DateTime.Today}";
+        }
+        public override string ToString()
+        {
+            return $"Name: {Name}\nDescription: {Description}";
         }
         public abstract void SitDown();
         public abstract void Request();
